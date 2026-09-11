@@ -1,0 +1,51 @@
+﻿<Window x:Class="inferenceclinet.Views.DefectDetailWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="불량확인" Height="420" Width="700"
+        WindowStartupLocation="CenterScreen">
+    <Grid Margin="16">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="1*"/>
+            <ColumnDefinition Width="16"/>
+            <ColumnDefinition Width="1*"/>
+        </Grid.ColumnDefinitions>
+
+        <StackPanel Grid.Column="0">
+            <TextBlock Text="불량확인" FontSize="18" FontWeight="Bold" Margin="0,0,0,16"/>
+
+            <TextBlock Text="불량 발생 시간" FontWeight="Bold"/>
+            <TextBlock x:Name="TimeText" Margin="0,0,0,12"/>
+
+            <TextBlock Text="형번" FontWeight="Bold"/>
+            <TextBlock x:Name="DefectTypeText" Margin="0,0,0,12"/>
+
+            <TextBlock Text="신뢰도" FontWeight="Bold"/>
+            <TextBlock x:Name="ConfidenceText" Margin="0,0,0,12"/>
+
+            <TextBlock Text="현재 위치" FontWeight="Bold"/>
+            <TextBlock x:Name="BoxText" Margin="0,0,0,12"/>
+
+            <TextBlock Text="메모" FontWeight="Bold"/>
+            <TextBox x:Name="MemoTextBox" AcceptsReturn="True" Height="60" TextWrapping="Wrap"/>
+        </StackPanel>
+
+        <Grid Grid.Column="2">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="Auto"/>
+            </Grid.RowDefinitions>
+
+            <Border Grid.Row="0" BorderBrush="Gray" BorderThickness="1">
+                <Grid>
+                    <TextBlock x:Name="ImagePlaceholderText" Text="IMG 없음" FontSize="18" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                    <Image x:Name="DetailImage" Stretch="Uniform"/>
+                </Grid>
+            </Border>
+
+            <StackPanel Grid.Row="1" Orientation="Horizontal" HorizontalAlignment="Right" Margin="0,12,0,0">
+                <Button x:Name="RegisterButton" Content="등록" Width="80" Height="30" Margin="0,0,8,0" Click="OnRegisterClick"/>
+                <Button x:Name="CloseButton" Content="닫기" Width="80" Height="30" Click="OnCloseClick"/>
+            </StackPanel>
+        </Grid>
+    </Grid>
+</Window>

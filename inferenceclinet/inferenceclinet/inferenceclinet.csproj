@@ -1,0 +1,30 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net10.0-windows</TargetFramework>
+    <Nullable>enable</Nullable>
+    <UseWPF>true</UseWPF>
+    <ImplicitUsings>enable</ImplicitUsings>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <!-- 로그인 검증 응답(loginResponse)을 받기 위해 WPF 프로세스 안에서 자체 HTTP 서버(Kestrel)를 호스팅 -->
+    <FrameworkReference Include="Microsoft.AspNetCore.App" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="..\docs\00-project-plan.md" Link="docs\00-project-plan.md" />
+    <None Include="..\docs\01-client-modules.md" Link="docs\01-client-modules.md" />
+    <None Include="..\docs\02-middleware-router-contract.md" Link="docs\02-middleware-router-contract.md" />
+    <None Include="..\docs\03-continuous-capture-plan.md" Link="docs\03-continuous-capture-plan.md" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="MySqlConnector" Version="2.6.2" />
+    <PackageReference Include="OpenCvSharp4" Version="4.13.0.20260627" />
+    <PackageReference Include="OpenCvSharp4.runtime.win" Version="4.13.0.20260627" />
+    <PackageReference Include="OpenCvSharp4.WpfExtensions" Version="4.13.0.20260627" />
+  </ItemGroup>
+
+</Project>

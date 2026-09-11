@@ -1,0 +1,5 @@
+<Solution>
+  <Project Path="DbConnectionTest/DbConnectionTest.csproj" />
+  <Project Path="inferenceclinet/inferenceclinet.csproj" />
+  <Project Path="PasswordHashTool/PasswordHashTool.csproj" />
+</Solution>
